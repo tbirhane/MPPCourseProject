@@ -10,6 +10,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.instagram.myInstagram.service.UserService;
+
 @RestController
 public class CommentController {
 	
@@ -17,30 +19,30 @@ public class CommentController {
 	@Autowired
 	private UserService userService;
 	
-	/**Get all elements*/
-	@RequestMapping("/topics")
-	public List<Topic> getAllTopics() {
-		return userService.getTopics();
-	}
-	/**Get the element with id = id*/
-	@RequestMapping("/topics/{id}")
-	public Topic getTopic(@PathVariable String id) {
-		return userService.getTopic(id);
-	}
-	/**Add a topic to topics*/
-	@RequestMapping(method=RequestMethod.POST, value="/topics")
-	public void postTopic(@RequestBody Topic topic) {
-		userService.add(topic);
-	}
-	/**Update a topic to in topics*/
-	@RequestMapping(method=RequestMethod.PUT, value="/topics/{id}")
-	public void updateTopic(@PathVariable String id, @RequestBody Topic topic) {
-		userService.updateTopic(id, topic);
-	}
-	
-	/**Delete an id with id*/
-	@RequestMapping(method=RequestMethod.DELETE, value = "/topics/{id}")
-	public void deleteTopic(@PathVariable String id) {
-		 userService.deleteTopic(id);
-	}
+//	/**Get all elements*/
+//	@RequestMapping("/Comments")
+//	public List<Comment> getAllComments() {
+//		return userService.getComments();
+//	}
+//	/**Get the element with id = id*/
+//	@RequestMapping("/Comments/{id}")
+//	public Comment getComment(@PathVariable String id) {
+//		return userService.getComment(id);
+//	}
+//	/**Add a Comment to Comments*/
+//	@RequestMapping(method=RequestMethod.POST, value="/Comments")
+//	public void postComment(@RequestBody Comment Comment) {
+//		userService.add(Comment);
+//	}
+//	/**Update a Comment to in Comments*/
+//	@RequestMapping(method=RequestMethod.PUT, value="/Comments/{id}")
+//	public void updateComment(@PathVariable String id, @RequestBody Comment Comment) {
+//		userService.updateComment(id, Comment);
+//	}
+//	
+//	/**Delete an id with id*/
+//	@RequestMapping(method=RequestMethod.DELETE, value = "/Comments/{id}")
+//	public void deleteComment(@PathVariable String id) {
+//		 userService.deleteComment(id);
+//	}
 }

@@ -2,6 +2,7 @@ package com.instagram.myInstagram.model;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.ManyToOne;
 
 @Entity
 public class User {
@@ -9,6 +10,9 @@ public class User {
 	private String id;
 	private String firstName;
 	private String lastName;
+//	@ManyToOne
+//	private Photo photo;
+	
 	public User(String id, String firstName, String lastName) {
 		super();
 		this.id = id;
