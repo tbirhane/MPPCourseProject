@@ -1,4 +1,4 @@
-package com.instagram.MyInstagram.Controller;
+package com.instagram.myInstagram.controller;
 
 public class Topic {
 	private String id;
@@ -7,6 +7,7 @@ public class Topic {
 	//Empty constructor
 	public Topic() {
 	}
+	//Constructor with parameter
 	public Topic(String id, String name, String description) {
 		super();
 		this.id = id;

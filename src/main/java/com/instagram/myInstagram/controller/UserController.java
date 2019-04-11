@@ -1,4 +1,4 @@
-package com.instagram.MyInstagram.Controller;
+package com.instagram.myInstagram.controller;
 
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
