@@ -21,7 +21,7 @@ public class UserController {
 	private UserService userService;
 	
 	/**Get all elements*/
-	@RequestMapping("/users/{id}/")
+	@RequestMapping("/users")
 	public List<User> getAllUsers() {
 		return userService.getUsers();
 	}
@@ -32,8 +32,8 @@ public class UserController {
 	}
 	/**Add a User to Users*/
 	@RequestMapping(method=RequestMethod.POST, value="/users")
-	public void postUser(@RequestBody User User) {
-		userService.add(User);
+	public void postUser(@RequestBody User user) {
+		userService.add(user);
 	}
 	/**Update a User to in Users*/
 	@RequestMapping(method=RequestMethod.PUT, value="/users/{id}")
